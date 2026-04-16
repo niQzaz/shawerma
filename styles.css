@@ -211,7 +211,7 @@ a {
 }
 
 .contact-card {
-    max-width: 28rem;
+    max-width: 32rem;
     margin: 0 auto;
     background-color: #262626;
     border-radius: 1rem;
@@ -225,12 +225,14 @@ a {
     justify-content: center;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
+    flex-wrap: nowrap; /* иконка и номер остаются на одной линии */
 }
 
 .phone-icon {
     width: 2rem;
     height: 2rem;
     color: #f97316;
+    flex-shrink: 0; /* иконка не сжимается */
 }
 
 .contact-phone {
@@ -238,6 +240,8 @@ a {
     font-weight: 700;
     color: #ffffff;
     transition: color 0.2s ease;
+
+    overflow-wrap: anywhere; /* перенос только если реально не хватает места */
 }
 
 .contact-phone:hover {
